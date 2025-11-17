@@ -1,0 +1,17 @@
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+  defaults:
+    remote: zephyrproject-rtos
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: v3.7.0
+      clone-depth: 1
+      west-commands: scripts/west-commands.yml
+    - name: boost-sml
+      url: https://github.com/d-o/sml.git
+      revision: zephyr_module
+  self:
+    path: app
